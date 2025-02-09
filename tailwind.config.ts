@@ -9,8 +9,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        darkGray: "#24232C",
+        mutedPurple: "#817D92",
+        lightGray: "#E6E5EA",
+        deepBlack: "#18171F",
+        neonGreen: "#A4FFAF",
+        softRed: "#F64A4A",
+        warmOrange: "#FB7C58",
+        goldenYellow: "#F8CD65",
       },
     },
   },
