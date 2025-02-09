@@ -110,6 +110,7 @@ export default function Home() {
           readOnly
         />
         <button type="button" className="flex items-center gap-2 text-neonGreen hover:text-lightGray flex-0" onClick={copyToClipboard}>
+          <span className="sr-only">Copy to clipboard</span>
           {copied && (
             <span className="uppercase">Copied!</span>
           )}
@@ -119,7 +120,7 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="p-4 mt-4 text-lg font-bold bg-darkGray">
+      <div className="p-4 text-lg font-bold mt-7 bg-darkGray">
         <h2 className="flex justify-between">
           <span>Character Length</span>
           <span className="text-xl font-bold text-neonGreen">{charLength}</span>
@@ -146,7 +147,7 @@ export default function Home() {
           { label: "Include Numbers", state: includeNumbers, setState: setIncludeNumbers },
           { label: "Include Symbols", state: includeSymbols, setState: setIncludeSymbols }
         ].map((option, index) => (
-          <div className="mt-2" key={index}>
+          <div className="mt-5" key={index}>
             <input
               type="checkbox"
               checked={option.state}
@@ -171,7 +172,7 @@ export default function Home() {
         ))}
 
         {/* Strength Gauge */}
-        <div className="flex justify-between p-4 mt-4 uppercase bg-deepBlack">
+        <div className="flex justify-between p-4 mt-5 uppercase bg-deepBlack">
           <span className="text-mutedPurple">Strength</span>
           <div className="flex items-center gap-2">
             <span className="text-lightGray">{strength.label}</span>
@@ -187,7 +188,7 @@ export default function Home() {
         </div>
 
         {/* Generate Button */}
-        <button type="button" className="flex items-center justify-center w-full gap-2 py-4 mt-4 text-lg font-bold uppercase border-2 text-deepBlack bg-neonGreen border-neonGreen hover:bg-transparent hover:text-neonGreen" onClick={generatePassword}>
+        <button type="button" className="flex items-center justify-center w-full gap-2 py-4 mt-5 text-lg font-bold uppercase border-2 text-deepBlack bg-neonGreen border-neonGreen hover:bg-transparent hover:text-neonGreen" onClick={generatePassword}>
           Generate
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.10553 12L11.1055 6.00002L5.10553 0L3.84051 1.26501L7.681 5.10547L6.10352e-05 5.10547V6.8946L7.681 6.8946L3.84051 10.735L5.10553 12Z" fill="currentColor" />
